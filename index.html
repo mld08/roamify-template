@@ -6,17 +6,19 @@
     <title>Roamify</title>
     <link rel="icon" href="assets/img/Favicon.png">
     <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css">
 </head>
 <body>
 
     <main class="main">
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-5 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-5 d-block">
             <div class="container"><a class="navbar-brand" href=""><img src="assets/img/Logo Alternatif.svg" height="34" alt="logo" /></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
-              <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+              <div class="collapse navbar-collapse border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base align-items-lg-center align-items-start">
                   <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" aria-current="page" href="#service">A propos</a></li>
-                  <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" aria-current="page" href="#destination">Hebergements</a></li>
+                  <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" aria-current="page" href="#destination">Hébergements</a></li>
                   <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" aria-current="page" href="#booking">Contact</a></li>
                   <li class="nav-item px-3 px-xl-4"><a class="btn btn-outline-dark order-1 order-lg-0 fw-medium" href="#!">Connexion</a></li>
                   <li class="nav-item dropdown px-3 px-lg-0"> <a class="d-inline-block ps-0 py-2 pe-3 text-decoration-none dropdown-toggle fw-medium" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">FR</a>
@@ -34,55 +36,84 @@
             </div>
             <!--/.bg-holder-->
 
-            
-            
-    
             <div class="container">
               <div class="row align-items-center">
                 <div class="col-lg-12 text-center py-6">
-                  <p class="hero-title">Où allons-nous ?</p>
+                  <div class="mb-7 text-center">
+                    <h1 class="fs-lg-10 fs-8 hero-title">Où allons-nous?</h1>
+                  </div>
                 </div>
-                
               </div>
+              
+              <div class="row">
+                <form>
+                  <div class="row">
+                    <!-- Destination -->
+                    <div class="form-group col-md-3">
+                      <label for="destination">Destination</label>
+                      <input type="text" class="form-control" id="destination" placeholder="Sélectionner une ville">
+                    </div> 
+                    <!-- Date de réservation -->
+                    <div class="form-group col-md-3">
+                      <label for="dates">Dates de réservation</label>
+                      <input type="text" class="form-control" id="dateRange" placeholder="Sélectionner les dates">
+                    </div>
+                    <!-- Nombre de voyageurs et chambres -->
+                    <div class="form-group col-md-3">
+                      <label for="travelers">Nombre de voyageurs & chambres</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><img src="user-icon.png" alt="Utilisateurs"></span>
+                        </div>
+                        <input type="text" class="form-control" id="travelers" placeholder="Nombre de voyageurs & chambres">
+                      </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                      <button type="submit" class="btn btn-primary">Rechercher</button>
+                    </div>
+                  </div>
+                  
+                </form>
+              </div>
+              
             </div>
           </section>
 
+          <!-- Destinations -->
           <section class="pt-5" id="destination">
-
             <div class="container">
-              <div class="position-absolute start-100 bottom-0 translate-middle-x d-none d-xl-block ms-xl-n4"><img src="assets/img/dest/shape.svg" alt="destination" /></div>
+              
               <div class="mb-7 text-center">
-                <h5 class="text-secondary">Top Selling </h5>
-                <h3 class="fs-xl-10 fs-lg-8 fs-7 fw-bold font-cursive text-capitalize">Top Destinations</h3>
+                <h3 class="fs-xl-10 fs-lg-8 fs-7">Destinations du moment</h3>
               </div>
               <div class="row">
                 <div class="col-md-4 mb-4">
-                  <div class="card overflow-hidden shadow"> <img class="card-img-top" src="assets/img/dest/dest1.jpg" alt="Rome, Italty" />
+                  <div class="card overflow-hidden shadow"> <img class="card-img-top" src="assets/img/dest/Dakar.jpg" alt="Dakar, Senegal" />
                     <div class="card-body py-4 px-3">
                       <div class="d-flex flex-column flex-lg-row justify-content-between mb-3">
-                        <h4 class="text-secondary fw-medium"><a class="link-900 text-decoration-none stretched-link" href="#!">Rome, Italty</a></h4><span class="fs-1 fw-medium">$5,42k</span>
+                        <h4 class="text-secondary fw-medium"><a class="link-900 text-decoration-none stretched-link" href="#!">Dakar</a></h4>
                       </div>
-                      <div class="d-flex align-items-center"> <img src="assets/img/dest/navigation.svg" style="margin-right: 14px" width="20" alt="navigation" /><span class="fs-0 fw-medium">10 Days Trip</span></div>
+                      <div class="d-flex align-items-center"> <img src="assets/img/dest/navigation.svg" style="margin-right: 14px" width="20" alt="navigation" /><span class="fs-0 fw-medium">15 établissements</span></div>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                  <div class="card overflow-hidden shadow"> <img class="card-img-top" src="assets/img/dest/dest2.jpg" alt="London, UK" />
+                  <div class="card overflow-hidden shadow"> <img class="card-img-top" src="assets/img/dest/Saly.jpg" alt="Saly Portudal"  height="382"/>
                     <div class="card-body py-4 px-3">
                       <div class="d-flex flex-column flex-lg-row justify-content-between mb-3">
-                        <h4 class="text-secondary fw-medium"><a class="link-900 text-decoration-none stretched-link" href="#!">London, UK</a></h4><span class="fs-1 fw-medium">$4.2k</span>
+                        <h4 class="text-secondary fw-medium"><a class="link-900 text-decoration-none stretched-link" href="#!">Saly Portudal</a></h4>
                       </div>
-                      <div class="d-flex align-items-center"> <img src="assets/img/dest/navigation.svg" style="margin-right: 14px" width="20" alt="navigation" /><span class="fs-0 fw-medium">12 Days Trip</span></div>
+                      <div class="d-flex align-items-center"> <img src="assets/img/dest/navigation.svg" style="margin-right: 14px" width="20" alt="navigation" /><span class="fs-0 fw-medium">10 établissements</span></div>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                  <div class="card overflow-hidden shadow"> <img class="card-img-top" src="assets/img/dest/dest3.jpg" alt="Full Europe" />
+                  <div class="card overflow-hidden shadow"> <img class="card-img-top" src="assets/img/dest/Thies.jpg" alt="Thies" />
                     <div class="card-body py-4 px-3">
                       <div class="d-flex flex-column flex-lg-row justify-content-between mb-3">
-                        <h4 class="text-secondary fw-medium"><a class="link-900 text-decoration-none stretched-link" href="#!">Full Europe</a></h4><span class="fs-1 fw-medium">$15k</span>
+                        <h4 class="text-secondary fw-medium"><a class="link-900 text-decoration-none stretched-link" href="#!">Thies</a></h4>
                       </div>
-                      <div class="d-flex align-items-center"> <img src="assets/img/dest/navigation.svg" style="margin-right: 14px" width="20" alt="navigation" /><span class="fs-0 fw-medium">28 Days Trip</span></div>
+                      <div class="d-flex align-items-center"> <img src="assets/img/dest/navigation.svg" style="margin-right: 14px" width="20" alt="navigation" /><span class="fs-0 fw-medium">7 établissements</span></div>
                     </div>
                   </div>
                 </div>
@@ -90,8 +121,288 @@
             </div><!-- end of .container-->
     
           </section>
+
+          <!-- Commodités -->
+
+          <section class="pt-1" id="commodities">
+            <div class="container">
+                <div class="mb-5 text-left">
+                    <h3 class="fs-xl-8 fs-lg-6 fs-7">Explorez par commodités de l'établissement</h3>
+                  </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="commodity">
+                            <img src="assets/img/Commodités/salle-de-conference.jpg" alt="Plage">
+                            <h5 class="commodity-title poppins-medium">Salle de conférence</h5>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="commodity">
+                            <img src="assets/img/Commodités/plage.jpg" alt="Plage">
+                            <h5 class="commodity-title poppins-medium">Accés à la plage</h5>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="commodity">
+                            <img src="assets/img/Commodités/salle-de-sport.jpg" alt="Plage">
+                            <h5 class="commodity-title poppins-medium">Salle de sport</h5>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="commodity">
+                            <img src="assets/img/Commodités/centre-de-bien-etre.jpg" alt="Plage">
+                            <h5 class="commodity-title poppins-medium">Centre de bien-être</h5>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="commodity">
+                            <img src="assets/img/Commodités/restaurant&bar.jpg" alt="Plage">
+                            <h5 class="commodity-title poppins-medium">Restaurant & Bar</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </section>
+
+          <!-- Nos recommendations -->
+          <section class="pt-1" id="recommendtions">
+            <div class="container">
+              <div class="mb-7 text-left">
+                <h3 class="fs-xl-9 fs-lg-7 fs-7">Nos recommendations</h3>
+                <p>Découvrez notre sélection d'hôtels du moment au Sénégal. Thème de la semaine : Accessibilité.</p>
+              </div>
+              <div class="row" id="cardGroup">
+                <div class="col-md-3 mb-4 recommendation-card">
+                    <div class="card overflow-hidden shadow"> 
+                      <img class="card-img card-img-top" src="assets/img/dest/Dakar.jpg" alt="Dakar, Senegal" />
+                      <div class="card-body py-4 px-3">
+                        <div class="d-flex flex-column flex-lg-row justify-content-between mb-0">
+                          <h4 class="text-secondary fw-medium"><a class="link-900 text-decoration-none stretched-link" href="#!">Résidences Feto</a></h4>
+                        </div>
+                        <i class="fas fa-star" style="color: gold;"></i><i class="fas fa-star" style="color: gold;"></i>
+                        <div class="d-flex align-items-center"> 
+                          <img src="assets/img/dest/navigation.svg" style="margin-right: 14px" width="20" alt="navigation" />
+                          <span class="fs-0 fw-medium color-3">Sud Foire, Dakar</span>
+                        </div>
+                        <div class="text-end">
+                          <p class="fs-0 fw-medium color-3">A partir de <br> <span class="fs-4 fw-bold">41 900 FCFA</span></p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 recommendation-card">
+                    <div class="card overflow-hidden shadow"> 
+                      <img class="card-img card-img-top" src="assets/img/dest/Dakar.jpg" alt="Dakar, Senegal" />
+                      <div class="card-body py-4 px-3">
+                        <div class="d-flex flex-column flex-lg-row justify-content-between mb-0">
+                          <h4 class="text-secondary fw-medium"><a class="link-900 text-decoration-none stretched-link" href="#!">Résidences Feto</a></h4>
+                        </div>
+                        <i class="fas fa-star" style="color: gold;"></i><i class="fas fa-star" style="color: gold;"></i>
+                        <div class="d-flex align-items-center"> 
+                          <img src="assets/img/dest/navigation.svg" style="margin-right: 14px" width="20" alt="navigation" />
+                          <span class="fs-0 fw-medium color-3">Sud Foire, Dakar</span>
+                        </div>
+                        <div class="text-end">
+                          <p class="fs-0 fw-medium color-3">A partir de <br> <span class="fs-4 fw-bold">41 900 FCFA</span></p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 recommendation-card">
+                    <div class="card overflow-hidden shadow"> 
+                      <img class="card-img card-img-top" src="assets/img/dest/Dakar.jpg" alt="Dakar, Senegal" />
+                      <div class="card-body py-4 px-3">
+                        <div class="d-flex flex-column flex-lg-row justify-content-between mb-0">
+                          <h4 class="text-secondary fw-medium"><a class="link-900 text-decoration-none stretched-link" href="#!">Résidences Feto</a></h4>
+                        </div>
+                        <i class="fas fa-star" style="color: gold;"></i><i class="fas fa-star" style="color: gold;"></i>
+                        <div class="d-flex align-items-center"> 
+                          <img src="assets/img/dest/navigation.svg" style="margin-right: 14px" width="20" alt="navigation" />
+                          <span class="fs-0 fw-medium color-3">Sud Foire, Dakar</span>
+                        </div>
+                        <div class="text-end">
+                          <p class="fs-0 fw-medium color-3">A partir de <br> <span class="fs-4 fw-bold">41 900 FCFA</span></p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 recommendation-card">
+                    <div class="card overflow-hidden shadow"> 
+                      <img class="card-img card-img-top" src="assets/img/dest/Dakar.jpg" alt="Dakar, Senegal" />
+                      <div class="card-body py-4 px-3">
+                        <div class="d-flex flex-column flex-lg-row justify-content-between mb-0">
+                          <h4 class="text-secondary fw-medium"><a class="link-900 text-decoration-none stretched-link" href="#!">Résidences Feto</a></h4>
+                        </div>
+                        <i class="fas fa-star" style="color: gold;"></i><i class="fas fa-star" style="color: gold;"></i>
+                        <div class="d-flex align-items-center"> 
+                          <img src="assets/img/dest/navigation.svg" style="margin-right: 14px" width="20" alt="navigation" />
+                          <span class="fs-0 fw-medium color-3">Sud Foire, Dakar</span>
+                        </div>
+                        <div class="text-end">
+                          <p class="fs-0 fw-medium color-3">A partir de <br> <span class="fs-4 fw-bold">41 900 FCFA</span></p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 recommendation-card">
+                    <div class="card overflow-hidden shadow"> 
+                      <img class="card-img card-img-top" src="assets/img/dest/Dakar.jpg" alt="Dakar, Senegal" />
+                      <div class="card-body py-4 px-3">
+                        <div class="d-flex flex-column flex-lg-row justify-content-between mb-0">
+                          <h4 class="text-secondary fw-medium"><a class="link-900 text-decoration-none stretched-link" href="#!">Radisson</a></h4>
+                        </div>
+                        <i class="fas fa-star" style="color: gold;"></i><i class="fas fa-star" style="color: gold;"></i>
+                        <div class="d-flex align-items-center"> 
+                          <img src="assets/img/dest/navigation.svg" style="margin-right: 14px" width="20" alt="navigation" />
+                          <span class="fs-0 fw-medium color-3">Sud Foire, Dakar</span>
+                        </div>
+                        <div class="text-end">
+                          <p class="fs-0 fw-medium color-3">A partir de <br> <span class="fs-4 fw-bold">41 900 FCFA</span></p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 recommendation-card">
+                    <div class="card overflow-hidden shadow"> 
+                      <img class="card-img card-img-top" src="assets/img/dest/Dakar.jpg" alt="Dakar, Senegal" />
+                      <div class="card-body py-4 px-3">
+                        <div class="d-flex flex-column flex-lg-row justify-content-between mb-0">
+                          <h4 class="text-secondary fw-medium"><a class="link-900 text-decoration-none stretched-link" href="#!">De Feto</a></h4>
+                        </div>
+                        <i class="fas fa-star" style="color: gold;"></i><i class="fas fa-star" style="color: gold;"></i>
+                        <div class="d-flex align-items-center"> 
+                          <img src="assets/img/dest/navigation.svg" style="margin-right: 14px" width="20" alt="navigation" />
+                          <span class="fs-0 fw-medium color-3">Sud Foire, Dakar</span>
+                        </div>
+                        <div class="text-end">
+                          <p class="fs-0 fw-medium color-3">A partir de <br> <span class="fs-4 fw-bold">41 900 FCFA</span></p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="text-center mt-4" id="buttonWrapper">
+                <button id="prevBtn" class="slick-arrow slick-prev" style="display: none;"><i class="fas fa-angle-left"></i></button>
+                <button id="nextBtn" class="slick-arrow slick-next"><i class="fas fa-angle-right"></i></button>
+              </div>
+            </div><!-- end of .container-->
+    
+          </section>
+
+          <div class="position-relative pt-5 pt-lg-5 pb-6 pb-lg-8">
+            <div class="container">
+              <div class="mb-7 text-center">
+                <h3 class="fs-xl-10 fs-lg-8 fs-7">Nos partenaires</h3>
+              </div>
+              <div class="row row-cols-lg-6 row-cols-md-3 row-cols-2 flex-center">
+                <div class="col">
+                  <div class="card shadow-hover mb-4" style="border-radius:10px;">
+                    <div class="card-body text-center"> <img class="img-fluid" src="assets/img/partner/1.png" alt="" /></div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-hover mb-4" style="border-radius:10px;">
+                    <div class="card-body text-center"> <img class="img-fluid" src="assets/img/partner/2.png" alt="" /></div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-hover mb-4" style="border-radius:10px;">
+                    <div class="card-body text-center"> <img class="img-fluid" src="assets/img/partner/3.png" alt="" /></div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-hover mb-4" style="border-radius:10px;">
+                    <div class="card-body text-center"> <img class="img-fluid" src="assets/img/partner/4.png" alt="" /></div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-hover mb-4" style="border-radius:10px;">
+                    <div class="card-body text-center"> <img class="img-fluid" src="assets/img/partner/5.png" alt="" /></div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-hover mb-4" style="border-radius:10px;">
+                    <div class="card-body text-center"> <img class="img-fluid" src="assets/img/partner/6.png" alt="" /></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- ============================================-->
+          <!-- <section> begin ============================-->
+          <section class="pt-6">
+            <div class="container">
+              <div class="py-8 px-5 position-relative text-center" style="background-color: #00BFFF;border-radius: 129px 20px 20px 20px;">
+                <div class="position-absolute start-100 top-0 translate-middle ms-md-n3 ms-n4 mt-2"> 
+                  <img src="assets/img/cta/send.png" style="max-width:70px;" alt="send icon" />
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-lg-9 col-md-10">
+                    <h2 class="fs-lg-5 lh-1-7 mb-3">Inscrivez-vous pour recevoir des e-mails marketing et
+                      des informations sur les produits et services de Roamify.</h2>
+                    <form class="row g-3 align-items-center w-lg-75 mx-auto">
+                      <div class="col-sm">
+                        <div class="input-group-icon"><input class="form-control form-little-squirrel-control" type="email" placeholder="Votre adresse email " aria-label="email" /><img class="input-box-icon" src="assets/img/cta/mail.svg" width="17" alt="mail" /></div>
+                      </div>
+                      <div class="col-sm-auto"><button class="btn btn-danger orange-gradient-btn fs--1">S'abonner</button></div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div><!-- end of .container-->
+          </section><!-- <section> close ============================-->
+          <!-- ============================================-->
+    
+    
+    
+          <!-- ============================================-->
+          <!-- <section> begin ============================-->
+          <section class="pb-0 pb-lg-4" style="background-color: #001F3F;">
+            <div class="position-absolute start-0 bottom-0 ms-3 z-index-999 d-none d-sm-block"> <img src="assets/img/cta/shape-bg1.png" style="max-width: 340px;" alt="cta shape" /></div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-3 col-md-7 col-12 mb-4 mb-md-6 mb-lg-0 order-0"> <img class="mb-2" src="assets/img/Logo Principal.png" width="150" alt="jadoo" />
+                  <p class="fs--3 text-white mb-0 fw-medium">Leader dans la réservation <br> en ligne au Sénégal.</p>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4 mb-lg-0 order-lg-1 order-md-2">
+                  <h4 class="footer-heading-color fw-bold font-sans-serif mb-2 mb-lg-3">A Propos</h4>
+                  <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><a class="link-white fs-1 fw-medium text-decoration-none" href="#!">L'Agence</a></li>
+                    <li class="mb-2"><a class="link-white fs-1 fw-medium text-decoration-none" href="#!">Nos Services</a></li>
+                    <li class="mb-2"><a class="link-white fs-1 fw-medium text-decoration-none" href="#!">Recrutement</a></li>
+                  </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4 mb-lg-0 order-lg-2 order-md-3">
+                  <h4 class="footer-heading-color fw-bold font-sans-serif mb-2 mb-lg-3">Contact</h4>
+                  <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><a class="link-white fs-1 fw-medium text-decoration-none" href="#!">Presse</a></li>
+                    <li class="mb-2"><a class="link-white fs-1 fw-medium text-decoration-none" href="#!">Partenariat</a></li>
+                    <li class="mb-2"><a class="link-white fs-1 fw-medium text-decoration-none" href="#!">Centre d'aide</a></li>
+                  </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4 mb-lg-0 order-lg-3 order-md-4">
+                  <h4 class="footer-heading-color fw-bold font-sans-serif mb-2 mb-lg-3">Explorez</h4>
+                  <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><a class="link-white fs-1 fw-medium text-decoration-none" href="#!">Termes</a></li>
+                    <li class="mb-2"><a class="link-white fs-1 fw-medium text-decoration-none" href="#!">Plan du site</a></li>
+                    <li class="mb-2"><a class="link-white fs-1 fw-medium text-decoration-none" href="#!">Confidentialité</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="pt-5 text-center">
+                <p class="mb-0 text-white fs--1 fw-medium">Copyright <span class="orange-color">&copy;</span> 2024 Roamify, Propriété d'Alpha Consulting Group - Tous droits réservés</p>
+              </div>
+            </div><!-- end of .container-->
+          </section><!-- <section> close ============================-->
+          <!-- ============================================-->
+    
+          
     </main>
 
-    <script src="vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-navbar.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/card.js"></script>
 </body>
 </html>
