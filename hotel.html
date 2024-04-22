@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="assets/css/theme.css">
     <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css">
+    <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,43 +51,101 @@
                 <h1 class="color-3 fw-bold">Terrou-Bi Resort</h1>
                 <div class="d-flex align-items-center"> 
                     <img src="assets/img/dest/navigation.svg" style="margin-right: 14px" width="20" alt="navigation" />
-                    <span class="fs-0 fw-normal color-3">Boulevard Martin Luther King , Gueule Tapee, 11179 Dakar, Sénégal &bull; <a href="#" class="color-2"> Voir sur la carte</a></span> 
+                    <span class="fs-0 fw-normal color-3">Boulevard Martin Luther King , Gueule Tapee, 11179 Dakar, Sénégal &bull; <button type="button" class="btn color-2" data-bs-toggle="modal" data-bs-target="#mapModal">Voir sur la carte</button></span> 
                 </div>
+                <!-- Modal Maps-->
+                <div class="modal fade" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="mapModalLabel">Carte</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div id="map" style="height: 400px;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 <!-- Gallery -->
                 <div class="row mt-3">
                     <div class="col-lg-6 col-md-12 px-0">
                     <img
-                        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+                        src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/427802640.jpg?k=e2f6b95301b1eeee21664142757c85ba856655bd5bd97a6fab31afa48f8b2d4e&o=&hp=1"
                         class="w-100 shadow-1-strong"
-                        alt="Boat on Calm Water"
+                        alt="Boat on Calm Water" style="object-fit: cover;"
                     />
                     </div>
                 
                     <div class="col-lg-3 mb-4 mb-lg-0 px-0">
                         <img
-                        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+                        src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/33075123.jpg?k=75b085b477fd6ed0004a8c4470d10b6717072de93527080a1c53330f327b5984&o=&hp=1"
                         class="w-100 shadow-1-strong"
-                        alt="Boat on Calm Water"
+                        alt="Boat on Calm Water" style="object-fit: cover; height: 50%;"
                     />
                 
                     <img
-                        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+                        src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/427809488.jpg?k=24d76030f3e591bef2c5de5ad6b4d65d818f183e30acac0ec1a53a88a4e6b866&o=&hp=1"
                         class="w-100 shadow-1-strong"
-                        alt="Boat on Calm Water"
+                        alt="Boat on Calm Water" style="object-fit: cover; height: 50%;"
                     />
                     </div>
                     <div class="col-lg-3 mb-4 mb-lg-0 px-0">
                         <img
-                        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+                        src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/173582157.jpg?k=f80c82cefea109a9ec42eb415fbcd34e04f133d8206628ac2b57271b60bb7ded&o=&hp=1"
                         class="w-100 shadow-1-strong"
-                        alt="Boat on Calm Water"
+                        alt="Boat on Calm Water" style="object-fit: cover; height: 50%;"
                     />
                     
                         <img
-                        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+                        src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/33075244.jpg?k=63f3f32caf57cf933977bf7a70d7d498b4a3f5905c78b3da57ab810eff985746&o=&hp=1"
                         class="w-100 shadow-1-strong"
-                        alt="Boat on Calm Water"
+                        alt="Boat on Calm Water" style="object-fit: cover; height: 50%;"
                         />
+                        <div class="position-relative">
+                          <button type="button" class="btn btn-primary position-absolute bottom-0 end-0 m-3" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                               +25
+                              <i class="fa fa-images"></i>
+                          </button>
+                          <!-- Modal Image-->
+                        <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-xl">
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h5 class="modal-title" id="galleryModalLabel">Galerie d'images</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body">
+                                      <!-- Carousel -->
+                                      <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+                                          <div class="carousel-inner">
+                                              <!-- Example for three images, repeat the below block for more -->
+                                              <div class="carousel-item active">
+                                                  <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/427802640.jpg?k=e2f6b95301b1eeee21664142757c85ba856655bd5bd97a6fab31afa48f8b2d4e&o=&hp=1" class="d-block w-100" alt="Image 1">
+                                              </div>
+                                              <div class="carousel-item">
+                                                  <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/33075123.jpg?k=75b085b477fd6ed0004a8c4470d10b6717072de93527080a1c53330f327b5984&o=&hp=1" class="d-block w-100" alt="Image 2">
+                                              </div>
+                                              <div class="carousel-item">
+                                                  <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/33075244.jpg?k=63f3f32caf57cf933977bf7a70d7d498b4a3f5905c78b3da57ab810eff985746&o=&hp=1" class="d-block w-100" alt="Image 3">
+                                              </div>
+                                          </div>
+                                          <button class="carousel-control-prev bg-color-2" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+                                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                              <span class="visually-hidden">Previous</span>
+                                          </button>
+                                          <button class="carousel-control-next bg-color-2" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+                                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                              <span class="visually-hidden">Next</span>
+                                          </button>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                      
                     </div>
                 </div>
                 <!-- Gallery -->
@@ -223,9 +282,303 @@
                         </div>
                     </div>
                 </div>
-                <div>
-                    
+                <!--Rooms Cards-->
+                <div class="my-3 row">
+                  <div class="col-lg-4">
+                    <div class="card border my-3">
+                      <img src="assets/img/chambre.jpg" alt="" class="card-img-top rounded-top">
+                      <div class="card-body color-3">
+                        <h6 class="fw-normal fs-0">Chambre double confort</h6>
+                        <p class="fw-thin p-0 m-0"><i class="fa fa-users"></i> <span>2 personnes</span></p>
+                        <p class="fw-thin p-0 m-0"><i class="fa fa-bed"></i> <span>1 lit 1 place</span></p>
+                        <p class="fw-thin p-0 m-0"><i class="fa fa-mug-saucer"></i> <span>Petit déjeuner buffet</span></p>
+                        <p class="fw-thin p-0 m-0"><i class="fa fa-wifi"></i> <span>Accés Wi-Fi gratuit</span></p>
+                        <hr>
+                        <div class="d-flex align-items-center">
+                          <div class="col-8">
+                            <h4>469 000 FCFA</h4>
+                            <small class="text-muted fs--5">Taxes locales comprises</small>
+                          </div>
+                          <div class="col-4 text-end">
+                            <a href="#" class="btn btn-orange rounded ms-auto">Réserver</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="card border my-3">
+                      <img src="assets/img/chambre.jpg" alt="" class="card-img-top rounded-top">
+                      <div class="card-body color-3">
+                        <h6 class="fw-normal fs-0">Chambre double confort</h6>
+                        <p class="fw-thin p-0 m-0"><i class="fa fa-users"></i> <span>2 personnes</span></p>
+                        <p class="fw-thin p-0 m-0"><i class="fa fa-bed"></i> <span>1 lit 1 place</span></p>
+                        <p class="fw-thin p-0 m-0"><i class="fa fa-mug-saucer"></i> <span>Petit déjeuner buffet</span></p>
+                        <p class="fw-thin p-0 m-0"><i class="fa fa-wifi"></i> <span>Accés Wi-Fi gratuit</span></p>
+                        <hr>
+                        <div class="d-flex align-items-center">
+                          <div class="col-8">
+                            <h4>469 000 FCFA</h4>
+                            <small class="text-muted fs--5">Taxes locales comprises</small>
+                          </div>
+                          <div class="col-4 text-end">
+                            <a href="#" class="btn btn-orange rounded ms-auto">Réserver</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="card border my-3">
+                      <img src="assets/img/chambre.jpg" alt="" class="card-img-top rounded-top">
+                      <div class="card-body color-3">
+                        <h6 class="fw-normal fs-0">Chambre double confort</h6>
+                        <p class="fw-thin p-0 m-0"><i class="fa fa-users"></i> <span>2 personnes</span></p>
+                        <p class="fw-thin p-0 m-0"><i class="fa fa-bed"></i> <span>1 lit 1 place</span></p>
+                        <p class="fw-thin p-0 m-0"><i class="fa fa-mug-saucer"></i> <span>Petit déjeuner buffet</span></p>
+                        <p class="fw-thin p-0 m-0"><i class="fa fa-wifi"></i> <span>Accés Wi-Fi gratuit</span></p>
+                        <hr>
+                        <div class="d-flex align-items-center">
+                          <div class="col-8">
+                            <h4>469 000 FCFA</h4>
+                            <small class="text-muted fs--5">Taxes locales comprises</small>
+                          </div>
+                          <div class="col-4 text-end">
+                            <a href="#" class="btn btn-orange rounded ms-auto">Réserver</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="card border my-3">
+                      <img src="assets/img/chambre.jpg" alt="" class="card-img-top rounded-top">
+                      <div class="card-body color-3">
+                        <h6 class="fw-normal fs-0">Chambre double confort</h6>
+                        <p class="fw-thin p-0 m-0"><i class="fa fa-users"></i> <span>2 personnes</span></p>
+                        <p class="fw-thin p-0 m-0"><i class="fa fa-bed"></i> <span>1 lit 1 place</span></p>
+                        <p class="fw-thin p-0 m-0"><i class="fa fa-mug-saucer"></i> <span>Petit déjeuner buffet</span></p>
+                        <p class="fw-thin p-0 m-0"><i class="fa fa-wifi"></i> <span>Accés Wi-Fi gratuit</span></p>
+                        <hr>
+                        <div class="d-flex align-items-center">
+                          <div class="col-8">
+                            <h4>469 000 FCFA</h4>
+                            <small class="text-muted fs--5">Taxes locales comprises</small>
+                          </div>
+                          <div class="col-4 text-end">
+                            <a href="#" class="btn btn-orange rounded ms-auto">Réserver</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="card border my-3">
+                      <img src="assets/img/chambre.jpg" alt="" class="card-img-top rounded-top">
+                      <div class="card-body color-3">
+                        <h6 class="fw-normal fs-0">Chambre double confort</h6>
+                        <p class="fw-thin p-0 m-0"><i class="fa fa-users"></i> <span>2 personnes</span></p>
+                        <p class="fw-thin p-0 m-0"><i class="fa fa-bed"></i> <span>1 lit 1 place</span></p>
+                        <p class="fw-thin p-0 m-0"><i class="fa fa-mug-saucer"></i> <span>Petit déjeuner buffet</span></p>
+                        <p class="fw-thin p-0 m-0"><i class="fa fa-wifi"></i> <span>Accés Wi-Fi gratuit</span></p>
+                        <hr>
+                        <div class="d-flex align-items-center">
+                          <div class="col-8">
+                            <h4>469 000 FCFA</h4>
+                            <small class="text-muted fs--5">Taxes locales comprises</small>
+                          </div>
+                          <div class="col-4 text-end">
+                            <a href="#" class="btn btn-orange rounded ms-auto">Réserver</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <div class="my-5">
+                  <h2 class="color-3 fw-normal">Présentation</h2>
+                  <hr class="color-3">
+                  <div class="row">
+                    <!--First-->
+                    <div class="col-lg-4">
+                      <div class="mb-3">
+                        <h6 class="fw-bold mb-3"><span class="fa fa-bath"></span>  Salle de bain</h6>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Papier toilette</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Serviette</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Baignoire ou douche</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Salle de bain privative</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">toilettes</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Articles de toilette gratuits</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">sèche cheveux</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Baignoire</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Douche</span><br>
+                      </div>
+                      
+                      <div class="mb-3">
+                        <h6 class="fw-bold mb-3"><span class="fa fa-bed"></span>  Chambre</h6>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Linge de maison</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Armoire ou penderie</span><br>
+                      </div>
+                      
+                      <div class="mb-3">
+                        <h6 class="fw-bold mb-3"><span class="fa fa-seedling"></span>  En extérieur</h6>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Mobilier extérieur</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Terrasse bien exposée</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Terrasse</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Jardin</span><br>
+                      </div>
+                      
+                      <div class="mb-3">
+                        <h6 class="fw-bold mb-3"><span class="fa fa-kitchen-set"></span>  Cuisine</h6>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Sèche linge</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Bouilloire électrique</span><br>
+                      </div>
+
+                      <div class="mb-3">
+                        <h6 class="fw-bold mb-3"><span class="fa fa-bed"></span>  Equipements en Chambre</h6>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Prise près du lit</span><br>
+                      </div>
+
+                      <div class="mb-3">
+                        <h6 class="fw-bold mb-3"><span class="fa fa-paw"></span>  Animaux domestiques</h6>
+                        <span class="fw-thin fs-0">Les animaux de compagnie sont admis (un supplément peut s'appliquer).</span><br>
+                      </div>
+
+                      <div class="mb-3">
+                        <h6 class="fw-bold mb-3"><span class="fa fa-golf-ball-tee"></span>  Activités</h6>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Concerts/Spectacles</span><br>
+                      </div>
+
+                      <div class="mb-3">
+                        <h6 class="fw-bold mb-3"><span class="fa fa-couch"></span>  Coin Salon</h6>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Bureau</span><br>
+                      </div>
+
+                      <div class="mb-3">
+                        <h6 class="fw-bold mb-3"><span class="fa fa-tv"></span>  High-tech</h6>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Télévision à écran plat</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Chaînes du câble</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Chaînes satellite</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Téléphone</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Télévision</span><br>
+                      </div>
+
+                      <div class="mb-3">
+                        <h6 class="fw-bold mb-3"><span class="fa fa-utensils"></span>  Restauration</h6>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Vin/champagne</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Menus enfants</span><br>
+                      </div>
+                    </div>
+                    <!--Second-->
+                    <div class="col-lg-4">
+                      <div class="mb-3">
+                        <h6 class="fw-bold mb-3"><span class="fa fa-car"></span>  Parking</h6>
+                        <span class="fw-thin fs-0">Un parking gratuit et privé est disponible sur place
+                          (sans réservation préalable).</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Service voiturier</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Parking accessible aux personnes à mobilité
+                          réduite</span><br>
+                      </div>
+                      
+                      <div class="mb-3">
+                        <h6 class="fw-bold mb-3"><span class="fa fa-door-open"></span>  Réception</h6>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Casier</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Enregistrement/départ privé</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Service de concierge</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Distributeur automatique de billets sur place</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Bagagerie</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Bureau d'excursions</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Service de change</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Enregistrement/règlement rapide</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Réception ouverte 24h/24</span><br>
+                      </div>
+                      
+                      <div class="mb-3">
+                        <h6 class="fw-bold mb-3"><span><img src="assets/img/washing-machine.svg" width="20px"></span>  Services de nettoyage</h6>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Service de ménage quotidien</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Service de repassage</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Nettoyage à sec</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Blanchisserie/laverie</span><br>
+                      </div>
+                      
+                      <div class="mb-3">
+                        <h6 class="fw-bold mb-3"><span class="fa fa-briefcase"></span>  Services d'affaires</h6>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Fax/photocopies</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Centre d'affaires</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Salle de réunion/réception</span><br>
+                      </div>
+
+                      <div class="mb-3">
+                        <h6 class="fw-bold mb-3"><span class="fa fa-lock"></span>  Sécurité</h6>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Extincteurs</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Caméras de surveillance dans les parties
+                          communes</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Détecteurs de fumée</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Alarme de sécurité</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Cartes d'accès</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Clés d'accès</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Sécurité 24h/24</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Coffre-fort</span><br>
+                      </div>
+                    </div>
+                    <!--Third-->
+                    <div class="col-lg-4">
+                      <div class="mb-3">
+                        <h6 class="fw-bold mb-3"><span class="fa fa-circle-info"></span>  Général</h6>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Service de navette</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Salon commun/salle de télévision</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Espace fumeurs</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Climatisation</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Établissement entièrement non-fumeurs</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Service de réveil</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Sol carrelé / en marbre</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Chauffage</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Location de voitures</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Paniers-repas</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Moquette</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Chambres insonorisées</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Ascenseur</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Chambres familiales</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Salon de coiffure/institut de beauté</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Matériel de repassage</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Équipements pour les personnes handicapées</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Navette aéroport</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Chambres non-fumeurs</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Fer à repasser</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Service d'étage</span><br>
+                      </div>
+                      
+                      <div class="mb-3">
+                        <h6 class="fw-bold mb-3"><span class="fa-brands fa-accessible-icon"></span>  Accessibilité</h6>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Logement entièrement accessible en fauteuil
+                          roulant</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Étages supérieurs accessibles par ascenseur</span><br>
+                      </div>
+                      
+                      <div class="mb-3">
+                        <h6 class="fw-bold mb-3"><span class="fa fa-person-swimming"></span>  Pisicine intérieure</h6>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Ouverte toute l'année</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Espace peu profond</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Serviettes de piscine/de plage</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Bar dans la piscine</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Chaises longues</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Parasols</span><br>
+                      </div>
+                      
+                      <div class="mb-3">
+                        <h6 class="fw-bold mb-3"><span class="fa fa-spa"></span>  Bien-être</h6>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Vestiaires salle de sport/spa</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Coach sportif personnel</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Cours de fitness</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Cours de yoga</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Fitness</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Forfaits spa/bien-être</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Coin spa/bien-être</span><br>
+                        <span class="fa fa-check"></span> <span class="fw-thin fs-0">Spa</span><br>
+                      </div>
+                    </div>
+                  </div>
+              </div>
             </div>
         </section>
 
@@ -238,6 +591,9 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/bootstrap-navbar.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script src="assets/js/carte.js"></script>
+    <!-- Google Maps API -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
     
     
 

@@ -19703,12 +19703,22 @@ iframe {
 .color-1{
   color: #00BFFF !important;
 }
+
+.bg-color-1{
+  background-color: #00BFFF !important;
+}
 .color-2{
   color: #FF4500 !important;
 }
-
+.bg-color-2{
+  background-color: #FF4500 !important;
+  opacity:  0.5;
+}
 .color-3{
   color: #001F3F !important;
+}
+.bg-color-2{
+  background-color: #001F3F !important;
 }
 
 .commodity {
@@ -19992,6 +20002,18 @@ input[type="range"]::-moz-range-thumb {
   border: #000 solid 1px;
   border-radius: 30px;
   padding: 0px 6px;
+}
+
+.btn-orange {
+  color: #FFFEFE;
+  background-color: #FF4500;
+  border-color: #FF4500;
+}
+
+.btn-orange:hover {
+  color: #FFFEFE;
+  background-color: #0763be;
+  border-color: #0763be;
 }
 /*-----------------------------------------------
 |   User Styles
