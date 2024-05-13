@@ -19539,9 +19539,8 @@ iframe {
 
 .hero-title {
   /*font-family: "Volkhov", "DM Serif Display", cursive;*/
-  font-family: 'Neueral Black';
-  font-weight: 500;
-  font-size: 6.20158rem !important;
+  font-weight: 700;
+  font-size: 3.17158rem !important;
   color: white;
   margin-bottom: 0px;
   position: relative;
@@ -19599,7 +19598,7 @@ iframe {
 }
 
 .hero-img {
-  width: 105%;
+  width: 95%;
   margin-left: -5rem;
 }
 
@@ -19717,7 +19716,7 @@ iframe {
 .color-3{
   color: #001F3F !important;
 }
-.bg-color-2{
+.bg-color-3{
   background-color: #001F3F !important;
 }
 

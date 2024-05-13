@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roamify</title>
+    <link rel="icon" href="assets/img/Favicon.png">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,900;1,300;1,400;1,500;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="main">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-5 d-block bg-color-3">
+            <div class="container"><a class="navbar-brand" href=""><img src="assets/img/Logo Principal.png" height="34" alt="logo" /></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
+              <div class="collapse navbar-collapse border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base align-items-lg-center align-items-start">
+                  <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" aria-current="page" href="a-propos.html">A propos</a></li>
+                  <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" aria-current="page" href="hebergement.html">Hébergements</a></li>
+                  <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" aria-current="page" href="#booking">Contact</a></li>
+                  <li class="nav-item px-3 px-xl-4"><a class="btn btn-outline-light order-1 order-lg-0 fw-medium" href="#!">Connexion</a></li>
+                  <li class="nav-item dropdown px-3 px-lg-0"> <a class="text-light d-inline-block ps-0 py-2 pe-3 text-decoration-none dropdown-toggle fw-medium" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">FR</a>
+                    <ul class="dropdown-menu dropdown-menu-end border-0 shadow-lg" style="border-radius:0.3rem;" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#!">EN</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+
+        <section style="padding-top: 10rem;">
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <h2 class="text-center mb-5 color-1">Formulaire de réservation</h2>
+                        <form class="row g-3" action="" method="POST">
+                            <!-- Champs pré-remplis à partir des détails de la recherche -->
+                            <input type="hidden" name="start_date" value="{{ session('start_date') }}">
+                            <input type="hidden" name="end_date" value="{{ session('end_date') }}">
+                            <input type="hidden" name="status" value="En attente">
+                        
+                            <div class="col-md-6">
+                                <label for="customer_prenom" class="form-label">Nom</label>
+                                <input type="text" class="form-control" id="customer_prenom" name="customer_prenom" placeholder="Lamine">
+                            </div>    
+                            <div class="col-md-6">
+                                <label for="customer_nom" class="form-label">Nom</label>
+                                <input type="text" class="form-control" id="customer_nom" name="customer_nom" placeholder="Diop">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="customer_email" class="form-label">Nom</label>
+                                <input type="text" class="form-control" id="customer_email" name="customer_email" placeholder="diop@xyz.com">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="customer_tel" class="form-label">Nom</label>
+                                <input type="tel" class="form-control" id="customer_tel" name="customer_tel" placeholder="778569922">
+                            </div>
+                            <div class="col-12">
+                              <label for="customer_adresse" class="form-label">Adresse</label>
+                              <input type="text" class="form-control" id="customer_adresse" name="customer_adresse" placeholder="1234 Main St">
+                            </div>
+            
+                            <div class="col-12 form-switch">
+                                <input type="checkbox" class="form-check-input" id="navette" name="navette" role="switch">
+                                <label for="customer_adresse" class="form-label">Navette</label>
+                            </div>
+            
+                            <div class="col-12 text-center py-5">
+                              <button type="submit" class="btn btn-danger">Réservez</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    
+          
+    </main>
+
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-navbar.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
