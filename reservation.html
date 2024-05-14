@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roamify</title>
-    <link rel="icon" href="assets/img/Favicon.png">
+    <link rel="shortcut icon" href="assets/img/Favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/theme.css">
     <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css">
@@ -40,11 +40,36 @@
             
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 mb-3">
-
+                    <div class="col-md-5 mb-3">
+                      <div class="card border mb-5">
+                        <div class="card-body">
+                          <h5 class="card-title">Terrou-Bi Resort</h5>
+                          <span class="fs--2">Boulevard Martin Luther King , Gueule Tapee, 11179 Dakar, Sénégal</span>
+                          <div class="my-3">
+                            <i class="fa fa-wifi"></i> <span>Wifi gratuit</span> <i class="fa fa-car"></i> Navette aéroport                         
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card border">
+                        <div class="card-body">
+                          <h5 class="card-title color-2">Les détails de votre réservation</h5>
+                          <div class="row">
+                            <div class="">
+                              <p>Arrivée : </p>
+                            </div>
+                            <div class="">
+                              <p>Départ : </p>
+                            </div>
+                          </div>
+                          <div class="my-3">
+                            <i class="fa fa-wifi"></i> <span>Wifi gratuit</span> <i class="fa fa-car"></i> Navette aéroport                         
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="col-md-6 mb-3">
-                        <h2 class="text-center mb-5 color-1">Formulaire de réservation</h2>
+                    <div class="col-md-7 mb-3">
+                      <div class="card border p-5">
+                        <h2 class="text-center mb-5 color-1">Saisissez vos coordonnées</h2>
                         <form class="row g-3" action="" method="POST">
                             <!-- Champs pré-remplis à partir des détails de la recherche -->
                             <input type="hidden" name="start_date" value="{{ session('start_date') }}">
@@ -81,6 +106,7 @@
                               <button type="submit" class="btn btn-danger">Réservez</button>
                             </div>
                         </form>
+                      </div>
                     </div>
                 </div>
             </div>
