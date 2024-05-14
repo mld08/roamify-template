@@ -18,7 +18,7 @@
 
     <main class="main">
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-5 d-block bg-color-3">
-            <div class="container"><a class="navbar-brand" href=""><img src="assets/img/Logo Principal.png" height="34" alt="logo" /></a>
+            <div class="container"><a class="navbar-brand" href="index.html"><img src="assets/img/Logo Principal.png" height="34" alt="logo" /></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
               <div class="collapse navbar-collapse border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base align-items-lg-center align-items-start">
@@ -37,7 +37,13 @@
         </nav>
 
         <section style="padding-top: 10rem;">
+          <div class="container my-5">
+            <div class="progress" style="height: 30px;">
+              <div class="progress-bar" role="progressbar" style="width: 66%;" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100">66%</div>
+            </div>
+            <div class="text-center my-1">Vous y êtes presque!</div>
             
+          </div>
             <div class="container">
                 <div class="row">
                     <div class="col-md-5 mb-3">
@@ -50,19 +56,29 @@
                           </div>
                         </div>
                       </div>
-                      <div class="card border">
+                      <div class="card border mb-5">
                         <div class="card-body">
-                          <h5 class="card-title color-2">Les détails de votre réservation</h5>
+                          <h5 class="card-title color-3">Les détails de votre réservation</h5>
                           <div class="row">
                             <div class="">
-                              <p>Arrivée : </p>
+                              <p>Arrivée : 12/01/2024</p>
                             </div>
                             <div class="">
-                              <p>Départ : </p>
+                              <p>Départ : 13/01/2024</p>
                             </div>
                           </div>
-                          <div class="my-3">
-                            <i class="fa fa-wifi"></i> <span>Wifi gratuit</span> <i class="fa fa-car"></i> Navette aéroport                         
+                          <div class="my-1">
+                            <p>Type de Chambre : <span class="color-2 badge">Chambre double</span></p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card border">
+                        <div class="card-body">
+                          <h5 class="card-title color-3">Récapitulatif du montant</h5>
+                          <div class="my-3 py-3 bg-info d-flex align-items-center">
+                            <h3 class="text-white px-2 col-6">Montant</h3>
+                            <h3 class="text-white col-6 text-end px-2">XOF 351 550</h3>
                           </div>
                         </div>
                       </div>
@@ -97,9 +113,9 @@
                               <input type="text" class="form-control" id="customer_adresse" name="customer_adresse" placeholder="1234 Main St">
                             </div>
             
-                            <div class="col-12 form-switch">
+                            <div class="col-12 mt-5">
                                 <input type="checkbox" class="form-check-input" id="navette" name="navette" role="switch">
-                                <label for="customer_adresse" class="form-label">Navette</label>
+                                <label for="customer_adresse" class="form-label">Je souhaite profiter de la navette aéroport</label>
                             </div>
             
                             <div class="col-12 text-center py-5">
